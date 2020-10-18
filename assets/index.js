@@ -30,7 +30,7 @@ function canvas(defensa) {
     exportEnabled: true,
     animationEnabled: true,
     title: {
-      text: "Desktop Browser Market Share in 2016",
+      text: "Estadisticas de tu Pokemon",
     },
     data: [
       {
