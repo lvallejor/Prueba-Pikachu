@@ -20,32 +20,56 @@
 
 <body>
 
-  <header>
+  <!-- Aqui va el buscador -->
+  <section class="container pb-4">
+    <div class="input-group mb-3 w-50 m-auto pt-5">
+      <select id="selector">
 
-  </header>
 
-  <section class="container">
+      </select>
 
-    <div class="input-group mb-3 w-25 m-auto pt-5">
-      <div class="input-group-prepend">
-        <span class="input-group-text" id="basic-addon1">Pokemon</span>
-      </div>
-      <input id="input" type="text" class="form-control" placeholder="Username" aria-label="Username"
+      <input id="input" type="text" class="form-control" placeholder="Pokemon" aria-label="Username"
         aria-describedby="basic-addon1">
+      <button type="button" class="btn btn-primary m-auto">Search</button>
+    </div>
+  </section>
+
+  <!-- Aqui va la vista -->
+  <section class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="card">
+          <div>
+            <img id="imagen" class="imagen">
+            <div id="pokemon">
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-8">
+        <div class="card">
+          <div class="card-body">
+            <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
     </div>
 
-    <button type="button" class="btn btn-info m-auto">Consultar</button>
-
-    <div id="pokemon"></div>
-
-    <div id="chartContainer" style="height: 300px; width: 100%;"></div>
 
 
   </section>
+
+  <!-- Aqui va el jquery -->
   <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
     crossorigin="anonymous"></script>
 
+  <!-- Canvas -->
+  <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
   <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+  <!-- Mi script -->
   <script src="assets/index.js"></script>
 </body>
 
