@@ -16,7 +16,7 @@ function consultaAPI(nombrePokemon) {
     success: function (data) {
       $("#pokemon").html(`
       <h3>${data.name}</h3> 
-      <h5>weight: ${data.weight}</h5>
+      <h5>weight: ${data.weight}[kg]</h5>
       `);
 
       let defense = data.stats[2].base_stat;
@@ -70,7 +70,7 @@ $("#selector").change(function () {
 
       $("#pokemon").html(`
       <h3>${respuesta.name}</h3> 
-      <h5>weight: ${respuesta.weight}</h5>
+      <h5>weight: ${respuesta.weight}[kg]</h5>
       `);
 
       let defense = respuesta.stats[2].base_stat;
@@ -83,19 +83,20 @@ $("#selector").change(function () {
   });
 });
 
+// Canvas
 function canvas(defense, atack, speed, hp) {
   var chart = new CanvasJS.Chart("chartContainer", {
     animationEnabled: true,
     theme: "light2", // "light1", "light2", "dark1", "dark2"
     title: {
-      text: "Estadisticas de tu Pokemon",
+      text: "Pokemon Stats",
     },
     axisY: {
       title: "Rate",
       suffix: "",
     },
     axisX: {
-      title: "Habilidades",
+      title: "Base Stats",
     },
     data: [
       {
